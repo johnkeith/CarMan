@@ -22,7 +22,6 @@ gem 'turbolinks'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'devise'
 
 gem 'kaminari'
 
@@ -34,7 +33,6 @@ group :test, :development do
   gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'dotenv-rails'
   gem 'valid_attribute'
   gem 'shoulda-matchers'
 end
