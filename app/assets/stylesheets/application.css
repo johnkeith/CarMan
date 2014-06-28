@@ -14,3 +14,7 @@
  *= require_self
  *= require bootstrap
  */
+
+ .main-container {
+  margin-top:50px;
+ }

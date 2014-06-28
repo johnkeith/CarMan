@@ -1,0 +1,7 @@
+= simple_form_for @car do |f|
+  = f.error_notification
+  = f.input :manufacturer, wrapper_html: { class: 'form-group'}
+  = f.input :color, wrapper_html: { class: 'form-group'}
+  = f.input :year, wrapper_html: { class: 'form-group'}, as: :integer
+  = f.input :mileage, wrapper_html: { class: 'form-group'}, as: :float
+  = f.submit 'Add Car',  class: 'btn btn-default'
