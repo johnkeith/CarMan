@@ -23,8 +23,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
-gem 'carrierwave'
-gem 'fog'
+
 gem 'kaminari'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -36,7 +35,6 @@ group :test, :development do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'dotenv-rails'
-  gem 'email_spec'
   gem 'valid_attribute'
   gem 'shoulda-matchers'
 end
