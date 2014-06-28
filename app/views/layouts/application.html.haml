@@ -21,10 +21,6 @@
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              - if current_user
-                = link_to "Sign out", signout_path
-              - else
-                = link_to "Sign in with Github", "/auth/github"
   %p.notice= notice
   %p.alert= alert
   .container

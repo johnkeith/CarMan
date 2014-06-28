@@ -13,7 +13,7 @@ feature "add new manufacturer to list", %q(
   #   I am redirected to the index of manufacturers
   
   scenario "user adds new manufacturer with valid information" do
-    visit '/manufacturer/new'
+    visit '/manufacturers/new'
     fill_in 'Name', with: 'Alfa Romeo'
     fill_in 'Country', with: 'Italy'
     click_button 'Add Manufacturer'
@@ -22,7 +22,7 @@ feature "add new manufacturer to list", %q(
   end
 
   scenario "user adds manufacturer with invalid information" do 
-    visit '/manufacturer/new'
+    visit '/manufacturers/new'
     fill_in 'Name', with: 'Car Maker'
     click_button 'Add Manufacturer'
     expect(page).to have_content('Invalid submission. Please include all 

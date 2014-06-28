@@ -1,0 +1,5 @@
+= simple_form_for @manufacturer do |f|
+  = f.error_notification
+  = f.input :name, wrapper_html: { class: 'form-group'}
+  = f.input :country, wrapper_html: { class: 'form-group'}, as: :string
+  = f.submit 'Add Manufacturer',  class: 'btn btn-default'
