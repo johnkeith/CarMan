@@ -1,0 +1,5 @@
+%ul
+  - @manufacturers.each do |man|
+    %li= "#{man.name} | #{man.country}"
+
+= paginate @manufacturers
