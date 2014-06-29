@@ -10,11 +10,11 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      flash[:notice] = 'Successfully added new car'
+      flash[:notice] = "Successfully added new car"
       redirect_to cars_path
     else
-      flash[:notice] = 'Invalid submission. Please include all 
-      required information about the car'
+      flash[:notice] = "Invalid submission. Please include all 
+      required information about the car"
       render :new
     end
   end

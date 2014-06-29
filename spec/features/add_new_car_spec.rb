@@ -4,7 +4,7 @@ feature 'add a new car to the lot', %q(
   As a car salesperson
   I want to record a newly acquired car
   So that I can list it in my lot
-  ) do
+) do
   # I must specify the manufacturer, color, year, and mileage of the car.
   # Only years from 1920 and above can be specified.
   # I can optionally specify a description of the car.
