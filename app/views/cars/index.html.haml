@@ -1,0 +1,5 @@
+%ul
+- @cars.each do |car|
+  %li= "Make: #{car.manufacturer} | Year: #{car.year} | Color: #{car.color} | Mileage #{car.mileage}"
+
+= paginate @cars

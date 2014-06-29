@@ -17,6 +17,7 @@ feature "add new manufacturer to list", %q(
     fill_in 'Name', with: 'Alfa Romeo'
     fill_in 'Country', with: 'Italy'
     click_button 'Add Manufacturer'
+    expect(page).to have_content('Successfully added new manufacturer')
     expect(page).to have_content('Alfa Romeo')
     expect(page).to have_content('Italy')
   end
@@ -26,7 +27,8 @@ feature "add new manufacturer to list", %q(
     fill_in 'Name', with: 'Car Maker'
     click_button 'Add Manufacturer'
     expect(page).to have_content('Invalid submission. Please include all 
-      required information about the manufacturer.')
+      required information about the manufacturer')
+  expect(page).to_not have_content 'Car Maker'
   end
 
 end

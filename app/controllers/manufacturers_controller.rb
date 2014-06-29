@@ -14,7 +14,7 @@ class ManufacturersController < ApplicationController
       redirect_to manufacturers_path
     else
       flash[:alert] = "Invalid submission. Please include all 
-      required information about the manufacturer."
+      required information about the manufacturer"
       render :new
     end
   end
