@@ -32,4 +32,15 @@ feature "add new manufacturer to list", %q(
       required information about the manufacturer')
     expect(page).to_not have_content 'Car Maker'
   end
+
+  scenario "user adds manufacturer already in database" do
+    manufacturer = FactoryGirl.create(:manufacturer)
+
+    visit '/manufacturers/new'
+    fill_in 'Name', with: manufacturer.name
+    fill_in 'Country', with: manufacturer.country
+    click_button 'Add Manufacturer'
+
+    expect(page).to have_content('has already been taken')
+  end
 end
