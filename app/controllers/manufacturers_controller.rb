@@ -8,12 +8,12 @@ class ManufacturersController < ApplicationController
   end
 
   def create
-    @manufacturer = Manufacturer.new(man_params)
+    @manufacturer = Manufacturer.new(manufacturer_params)
     if @manufacturer.save
       flash[:notice] = "Successfully added new manufacturer"
       redirect_to manufacturers_path
     else
-      flash[:alert] = "Invalid submission. Please include all 
+      flash[:alert] = "Invalid submission. Please include all
       required information about the manufacturer"
       render :new
     end
@@ -21,7 +21,7 @@ class ManufacturersController < ApplicationController
 
   private
 
-  def man_params
+  def manufacturer_params
     params.require(:manufacturer).permit(:name, :country)
   end
 end
